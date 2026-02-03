@@ -1,0 +1,39 @@
+.Quote {
+  padding: 32px 0;
+}
+
+.Quote__card {
+  background-color: #242424;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.Quote__text {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.Quote__author {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.Quote__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Quote__time {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.Quote__desc {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin: 0;
+}

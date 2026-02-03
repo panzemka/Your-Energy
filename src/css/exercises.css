@@ -1,0 +1,126 @@
+.Exercises {
+  padding: 32px 0;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.Exercises__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.Exercises__card {
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Exercises__name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Exercises__meta {
+  font-size: 12px;
+  color: #7a7a7a;
+}
+
+.Exercises__start {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: #242424;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  .Exercises__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop */
+@media (min-width: 1280px) {
+  .Exercises__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Filters {
+  padding: 24px 0;
+}
+
+.Filters__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.Filters__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.Filters__btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #242424;
+  background-color: transparent;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #242424;
+
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.Filters__btn:hover {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+
+.Filters__btn--active {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.Exercises__search {
+  margin-bottom: 16px;
+}
+
+.Exercises__input {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 14px;
+
+  border-radius: 999px;
+  border: 1px solid #242424;
+
+  font-size: 14px;
+}
+
+.Exercises__remove {
+  margin-top: 8px;
+  background-color: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}

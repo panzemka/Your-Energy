@@ -1,0 +1,35 @@
+.Modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.Modal.is-hidden {
+  display: none;
+}
+
+.Modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Modal__content {
+  position: relative;
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  z-index: 1;
+}
+
+.Modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
