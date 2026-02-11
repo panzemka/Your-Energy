@@ -5,61 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
-    <link rel="stylesheet" crossorigin href="/Your-Energy/assets/styles-sL-Bz8G_.css">
+    <link rel="stylesheet" crossorigin href="/Your-Energy/assets/styles-BmoiZZRY.css">
   </head>
   <body>
-    <header class="Header">
-  <div class="Header__container container">
-    <a href="./index.html" class="Header__logo" aria-label="Your Energy home">
+    <header class="header">
+  <div class="container header__container">
+    <a href="./index.html" class="header__logo">
       YOUR ENERGY
     </a>
 
-    <nav class="Header__nav" aria-label="Main navigation">
-      <a href="./index.html" class="Header__link Header__link--active">Home</a>
-      <a href="./favorites.html" class="Header__link">Favorites</a>
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li>
+          <a href="./index.html" class="header__link header__link--active">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="./page-2.html" class="header__link">
+            Favorites
+          </a>
+        </li>
+      </ul>
     </nav>
 
-    <ul class="Header__socials">
+    <ul class="header__socials">
       <li>
-        <a
-          href="https://www.facebook.com/goITclub/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
+        <a href="https://www.facebook.com/goITclub/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Facebook">
           FB
         </a>
       </li>
       <li>
-        <a
-          href="https://www.instagram.com/goitclub/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
+        <a href="https://www.instagram.com/goitclub/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram">
           IG
         </a>
       </li>
       <li>
-        <a
-          href="https://www.youtube.com/c/GoIT"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="YouTube"
-        >
+        <a href="https://www.youtube.com/c/GoIT"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="YouTube">
           YT
         </a>
       </li>
     </ul>
-
-    <button class="Header__burger" type="button" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </div>
 </header>
-
 
     <main>
       <div class="container">
@@ -72,20 +69,33 @@
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__container">
+
+    <div class="footer__left">
+      <h2 class="footer__logo">YOUR ENERGY</h2>
+
+      <ul class="footer__socials">
+        <li><a href="#" aria-label="Facebook">FB</a></li>
+        <li><a href="#" aria-label="Instagram">IG</a></li>
+        <li><a href="#" aria-label="YouTube">YT</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__right">
+      <h3>Subscribe and learn about new exercises!</h3>
+
+      <form id="subscribe-form" class="footer__form">
+        <input type="email"
+               name="email"
+               placeholder="Email"
+               required />
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <p id="subscribe-message"></p>
+    </div>
+
   </div>
 </footer>
-
   </body>
 </html>

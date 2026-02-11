@@ -1,97 +1,95 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Energy</title>
+  <script type="module" crossorigin src="/Your-Energy/assets/index-Cw7Ad9Zh.js"></script>
+  <link rel="modulepreload" crossorigin href="/Your-Energy/assets/modal-DQu2SKgR.js">
+  <link rel="stylesheet" crossorigin href="/Your-Energy/assets/styles-BmoiZZRY.css">
+</head>
 
-    <title>Your Energy</title>
+<body>
 
-    <link rel="icon" type="image/svg+xml" href="/Your-Energy/favicon.svg" />
-    <script type="module" crossorigin src="/Your-Energy/assets/index-B7cRsFBY.js"></script>
-    <link rel="modulepreload" crossorigin href="/Your-Energy/assets/modal-DQu2SKgR.js">
-    <link rel="stylesheet" crossorigin href="/Your-Energy/assets/styles-sL-Bz8G_.css">
-  </head>
-
-  <body>
-    <header class="Header">
-  <div class="Header__container container">
-    <a href="./index.html" class="Header__logo" aria-label="Your Energy home">
+  <header class="header">
+  <div class="container header__container">
+    <a href="./index.html" class="header__logo">
       YOUR ENERGY
     </a>
 
-    <nav class="Header__nav" aria-label="Main navigation">
-      <a href="./index.html" class="Header__link Header__link--active">Home</a>
-      <a href="./favorites.html" class="Header__link">Favorites</a>
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li>
+          <a href="./index.html" class="header__link header__link--active">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="./page-2.html" class="header__link">
+            Favorites
+          </a>
+        </li>
+      </ul>
     </nav>
 
-    <ul class="Header__socials">
+    <ul class="header__socials">
       <li>
-        <a
-          href="https://www.facebook.com/goITclub/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
+        <a href="https://www.facebook.com/goITclub/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Facebook">
           FB
         </a>
       </li>
       <li>
-        <a
-          href="https://www.instagram.com/goitclub/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
+        <a href="https://www.instagram.com/goitclub/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram">
           IG
         </a>
       </li>
       <li>
-        <a
-          href="https://www.youtube.com/c/GoIT"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="YouTube"
-        >
+        <a href="https://www.youtube.com/c/GoIT"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="YouTube">
           YT
         </a>
       </li>
     </ul>
-
-    <button class="Header__burger" type="button" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </div>
 </header>
 
+  <main class="Home">
+    <div class="container Home__layout">
 
-    <main class="Home">
-  <div class="container Home__layout">
-    <aside class="Home__aside">
-      <section class="Quote">
-  <div class="container">
-    <div class="Quote__card">
-      <p class="Quote__text" id="quote-text">
-        Loading quote...
-      </p>
-      <p class="Quote__author" id="quote-author"></p>
+      <aside class="Home__aside">
+        <section class="Quote">
+  <div class="Quote__card">
+    <p class="Quote__text" id="quote-text">
+      Loading quote...
+    </p>
+    <p class="Quote__author" id="quote-author"></p>
+  </div>
+
+  <div class="Quote__info">
+    <div class="Quote__minutes">
+      <span class="Quote__number">110</span>
+      <span>min</span>
     </div>
 
-    <div class="Quote__info">
-      <span class="Quote__time">110 min</span>
-      <p class="Quote__desc">
-        Daily norm of sports recommended by WHO for adults.
-      </p>
-    </div>
+    <p class="Quote__desc">
+      Daily norm of sports recommended by WHO for adults.
+    </p>
   </div>
 </section>
-    </aside>
+      </aside>
 
-    <section class="Home__content">
-      <section class="Hero">
-  <div class="Hero__container container">
-    <div class="Hero__content">
+      <section class="Home__content">
+        <section class="Hero">
+  <div class="container Hero__grid">
+    <div class="Hero__left">
       <ul class="Hero__tags">
         <li>#Sport</li>
         <li>#Healthy</li>
@@ -100,26 +98,22 @@
       </ul>
 
       <h1 class="Hero__title">
-        Get Body in shape, <br />
+        Get Body in shape,<br />
         Stay healthy
       </h1>
 
-      <p class="Hero__text">
-        Transform your physique and embrace a healthier lifestyle with
-        our comprehensive fitness and nutrition support.
+      <p class="Hero__subtitle">
+        Transform your physique and embrace a healthier lifestyle
+        with our comprehensive fitness and nutrition support.
       </p>
     </div>
 
-    <div class="Hero__image">
-      <img
-        src="../images/hero/hero.jpg"
-        srcset="/Your-Energy/assets/hero-ZXKJ_59h.jpg 1x, /Your-Energy/assets/hero@2x-Dz8P5uDH.jpg 2x"
-        alt="Fitness training"
-      >
+    <div class="Hero__right">
+      <img src="/Your-Energy/assets/hero-ZXKJ_59h.jpg" alt="Fitness training">
     </div>
   </div>
 </section>
-      <div class="Filters__buttons">
+        <div class="Filters__buttons">
   <button
   class="Filters__btn Filters__btn--active"
   type="button"
@@ -136,12 +130,12 @@
   Equipment
 </button>
 </div>
-      <section class="Categories">
+        <section class="Categories">
   <h2 class="Categories__title">Categories</h2>
 
   <ul class="Categories__list" id="categories-list"></ul>
 </section>
-      <form class="Exercises__search" id="exercises-search">
+        <form class="Exercises__search" id="exercises-search">
   <input
     class="Exercises__input"
     type="text"
@@ -163,7 +157,7 @@
   </div>
 </section>
 
-      <div class="Modal is-hidden" id="exercise-modal">
+        <div class="Modal is-hidden" id="exercise-modal">
   <div class="Modal__backdrop" data-close></div>
 
   <div class="Modal__content">
@@ -173,27 +167,41 @@
     </div>
   </div>
 </div>
-    </section>
-  </div>
-</main>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+  <div class="container footer__container">
+
+    <div class="footer__left">
+      <h2 class="footer__logo">YOUR ENERGY</h2>
+
+      <ul class="footer__socials">
+        <li><a href="#" aria-label="Facebook">FB</a></li>
+        <li><a href="#" aria-label="Instagram">IG</a></li>
+        <li><a href="#" aria-label="YouTube">YT</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__right">
+      <h3>Subscribe and learn about new exercises!</h3>
+
+      <form id="subscribe-form" class="footer__form">
+        <input type="email"
+               name="email"
+               placeholder="Email"
+               required />
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <p id="subscribe-message"></p>
+    </div>
+
   </div>
 </footer>
 
 
-  </body>
+</body>
 </html>
