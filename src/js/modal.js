@@ -62,7 +62,7 @@ export async function openExerciseModal(id) {
           <li><span>Target</span>${data.target}</li>
           <li><span>Body Part</span>${data.bodyPart}</li>
           <li><span>Equipment</span>${data.equipment}</li>
-          <li><span>Calories</span>${data.caloriesBurned}</li>
+          <li><span>Calories</span>${data.burnedCalories || data.caloriesBurned || 0} / ${data.time} min</li>
         </ul>
 
         <p class="Modal__description">
