@@ -1,3 +1,5 @@
+import { openExerciseModal } from './modal';
+
 const sectionEl = document.getElementById('exercises-section');
 const titleEl = document.getElementById('exercises-title');
 const listEl = document.getElementById('exercises-list');
@@ -6,12 +8,9 @@ export function showExercises() {
   sectionEl.classList.remove('is-hidden');
 }
 
-export function hideExercises() {
-  sectionEl.classList.add('is-hidden');
-}
-
 export function renderExercises(exercises = [], title = '') {
-  titleEl.textContent = title;
+  showExercises();
+  titleEl.textContent = `Exercises / ${title}`;
 
   if (!exercises.length) {
     listEl.innerHTML = '<p>No exercises found</p>';
@@ -20,48 +19,33 @@ export function renderExercises(exercises = [], title = '') {
 
   listEl.innerHTML = exercises
     .map(
-      ({ name, bodyPart, target, caloriesBurned, time }) => `
-      <li class="Exercises__card">
-        <h3 class="Exercises__name">${name}</h3>
-        <p class="Exercises__meta">Body part: ${bodyPart}</p>
-        <p class="Exercises__meta">Target: ${target}</p>
-        <p class="Exercises__meta">${caloriesBurned} calories / ${time} min</p>
-        <button class="Exercises__start" type="button">Start</button>
-      </li>
-    `
-    )
-    .join('');
-}
-import { openExerciseModal } from './modal';
+      ({ _id, name, bodyPart, target, caloriesBurned, time, rating }) => `
+      <li class="exercise-card">
+        <div class="exercise-card__top">
+          <span class="badge">WORKOUT</span>
+          <span class="rating">${rating.toFixed(1)} ⭐</span>
+        </div>
 
-export function renderExercisesList(exercises = [], title = '') {
-  titleEl.textContent = title;
+        <h3 class="exercise-card__title">${name}</h3>
 
-  if (!exercises.length) {
-    listEl.innerHTML = '<p>No exercises found</p>';
-    return;
-  }
+        <p class="meta">
+          Burned calories: ${caloriesBurned} / ${time} min
+        </p>
+        <p class="meta">Body part: ${bodyPart}</p>
+        <p class="meta">Target: ${target}</p>
 
-  listEl.innerHTML = exercises
-    .map(
-      ({ _id, name, bodyPart, target, caloriesBurned, time }) => `
-      <li class="Exercises__card">
-        <h3 class="Exercises__name">${name}</h3>
-        <p class="Exercises__meta">Body part: ${bodyPart}</p>
-        <p class="Exercises__meta">Target: ${target}</p>
-        <p class="Exercises__meta">${caloriesBurned} calories / ${time} min</p>
-        <button class="Exercises__start" type="button" data-id="${_id}">
-          Start
+        <button class="exercise-card__btn"
+                data-id="${_id}">
+          Start →
         </button>
       </li>
     `
     )
     .join('');
 
-  listEl.addEventListener('click', event => {
-    const btn = event.target.closest('.Exercises__start');
+  listEl.addEventListener('click', e => {
+    const btn = e.target.closest('.exercise-card__btn');
     if (!btn) return;
-
     openExerciseModal(btn.dataset.id);
   });
 }

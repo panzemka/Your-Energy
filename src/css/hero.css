@@ -9,34 +9,8 @@
   align-items: center;
 }
 
-.Hero__quote {
-  background: #242424;
-  color: #fff;
-  padding: 16px 24px;
-  border-radius: 12px;
-  margin-bottom: 24px;
-}
-
-.Hero__norm {
-  display: flex;
-  gap: 12px;
-  align-items: baseline;
-  margin-bottom: 24px;
-}
-
-.Hero__norm-value {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.Hero__tags {
-  font-size: 12px;
-  opacity: 0.6;
-  margin-bottom: 16px;
-}
-
 .Hero__title {
-  font-size: 56px;
+  font-size: 48px;
   line-height: 1.1;
   margin-bottom: 24px;
 }
@@ -45,7 +19,7 @@
   max-width: 420px;
 }
 
-.Hero__image img {
+.Hero__right img {
   width: 100%;
   border-radius: 24px;
 }
