@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Your Energy</title>
+
+    <link rel="icon" type="image/svg+xml" href="/Your-Energy/favicon.svg" />
+    <script type="module" crossorigin src="/Your-Energy/assets/index-B7cRsFBY.js"></script>
+    <link rel="modulepreload" crossorigin href="/Your-Energy/assets/modal-DQu2SKgR.js">
+    <link rel="stylesheet" crossorigin href="/Your-Energy/assets/styles-sL-Bz8G_.css">
+  </head>
+
+  <body>
+    <header class="Header">
+  <div class="Header__container container">
+    <a href="./index.html" class="Header__logo" aria-label="Your Energy home">
+      YOUR ENERGY
+    </a>
+
+    <nav class="Header__nav" aria-label="Main navigation">
+      <a href="./index.html" class="Header__link Header__link--active">Home</a>
+      <a href="./favorites.html" class="Header__link">Favorites</a>
+    </nav>
+
+    <ul class="Header__socials">
+      <li>
+        <a
+          href="https://www.facebook.com/goITclub/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          FB
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/goitclub/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          IG
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/c/GoIT"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          YT
+        </a>
+      </li>
+    </ul>
+
+    <button class="Header__burger" type="button" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+
+    <main class="Home">
+  <div class="container Home__layout">
+    <aside class="Home__aside">
+      <section class="Quote">
+  <div class="container">
+    <div class="Quote__card">
+      <p class="Quote__text" id="quote-text">
+        Loading quote...
+      </p>
+      <p class="Quote__author" id="quote-author"></p>
+    </div>
+
+    <div class="Quote__info">
+      <span class="Quote__time">110 min</span>
+      <p class="Quote__desc">
+        Daily norm of sports recommended by WHO for adults.
+      </p>
+    </div>
+  </div>
+</section>
+    </aside>
+
+    <section class="Home__content">
+      <section class="Hero">
+  <div class="Hero__container container">
+    <div class="Hero__content">
+      <ul class="Hero__tags">
+        <li>#Sport</li>
+        <li>#Healthy</li>
+        <li>#Workout</li>
+        <li>#Diet</li>
+      </ul>
+
+      <h1 class="Hero__title">
+        Get Body in shape, <br />
+        Stay healthy
+      </h1>
+
+      <p class="Hero__text">
+        Transform your physique and embrace a healthier lifestyle with
+        our comprehensive fitness and nutrition support.
+      </p>
+    </div>
+
+    <div class="Hero__image">
+      <img
+        src="../images/hero/hero.jpg"
+        srcset="/Your-Energy/assets/hero-ZXKJ_59h.jpg 1x, /Your-Energy/assets/hero@2x-Dz8P5uDH.jpg 2x"
+        alt="Fitness training"
+      >
+    </div>
+  </div>
+</section>
+      <div class="Filters__buttons">
+  <button
+  class="Filters__btn Filters__btn--active"
+  type="button"
+  data-filter="Muscles"
+>
+  Muscles
+</button>
+
+<button class="Filters__btn" type="button" data-filter="Body parts">
+  Body parts
+</button>
+
+<button class="Filters__btn" type="button" data-filter="Equipment">
+  Equipment
+</button>
+</div>
+      <section class="Categories">
+  <h2 class="Categories__title">Categories</h2>
+
+  <ul class="Categories__list" id="categories-list"></ul>
+</section>
+      <form class="Exercises__search" id="exercises-search">
+  <input
+    class="Exercises__input"
+    type="text"
+    name="keyword"
+    placeholder="Search exercises"
+    autocomplete="off"
+  />
+</form>
+
+<section class="Exercises is-hidden" id="exercises-section">
+  <div class="container">
+    <h2 class="Exercises__title" id="exercises-title"></h2>
+
+    <ul class="Exercises__list" id="exercises-list">
+    </ul>
+
+    <div class="Exercises__pagination" id="exercises-pagination">
+    </div>
+  </div>
+</section>
+
+      <div class="Modal is-hidden" id="exercise-modal">
+  <div class="Modal__backdrop" data-close></div>
+
+  <div class="Modal__content">
+    <button class="Modal__close" type="button" data-close>✕</button>
+
+    <div class="Modal__body" id="modal-body">
+    </div>
+  </div>
+</div>
+    </section>
+  </div>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+  <div class="container">
+    <p class="footer-desc">
+      Made with ✨ by
+      <a
+        class="footer-link"
+        href="https://goit.global/ua/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GoIT team
+      </a>
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
