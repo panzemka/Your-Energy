@@ -1,8 +1,8 @@
-const s="your-energy-favorites";function n(){return JSON.parse(localStorage.getItem(s))||[]}function c(e){const t=n();t.some(a=>a._id===e._id)||(t.push(e),localStorage.setItem(s,JSON.stringify(t)))}function v(e){const t=n().filter(a=>a._id!==e);localStorage.setItem(s,JSON.stringify(t))}function r(e){return n().some(t=>t._id===e)}const f="https://your-energy.b.goit.study/api/exercises";async function _(e){const t=await fetch(`${f}/${e}`);if(!t.ok)throw new Error("Failed to fetch exercise details");return t.json()}const i=document.getElementById("exercise-modal"),d=document.getElementById("modal-body");function u(){i.classList.remove("is-hidden"),document.body.style.overflow="hidden"}function l(){i.classList.add("is-hidden"),d.innerHTML="",document.body.style.overflow=""}i.addEventListener("click",e=>{e.target.hasAttribute("data-close")&&l()});document.addEventListener("keydown",e=>{e.key==="Escape"&&l()});function m(e){return Array.from({length:5},(t,a)=>`
+const s="your-energy-favorites";function n(){return JSON.parse(localStorage.getItem(s))||[]}function c(e){const t=n();t.some(a=>a._id===e._id)||(t.push(e),localStorage.setItem(s,JSON.stringify(t)))}function v(e){const t=n().filter(a=>a._id!==e);localStorage.setItem(s,JSON.stringify(t))}function r(e){return n().some(t=>t._id===e)}const f="https://your-energy.b.goit.study/api/exercises";async function m(e){const t=await fetch(`${f}/${e}`);if(!t.ok)throw new Error("Failed to fetch exercise details");return t.json()}const i=document.getElementById("exercise-modal"),d=document.getElementById("modal-body");function u(){i.classList.remove("is-hidden"),document.body.style.overflow="hidden"}function l(){i.classList.add("is-hidden"),d.innerHTML="",document.body.style.overflow=""}i.addEventListener("click",e=>{e.target.hasAttribute("data-close")&&l()});document.addEventListener("keydown",e=>{e.key==="Escape"&&l()});function _(e){return Array.from({length:5},(t,a)=>`
     <span class="Modal__star ${a<Math.round(e)?"Modal__star--active":""}">
       ★
     </span>
-  `).join("")}async function p(e){const t=await _(e),a=r(e);d.innerHTML=`
+  `).join("")}async function p(e){const t=await m(e),a=r(e);d.innerHTML=`
     <div class="Modal__wrapper">
       <div class="Modal__image-wrapper">
         <img src="${t.gifUrl}" alt="${t.name}" class="Modal__image" />
@@ -14,7 +14,7 @@ const s="your-energy-favorites";function n(){return JSON.parse(localStorage.getI
         <div class="Modal__rating-block">
           <span class="Modal__rating-value">${t.rating.toFixed(1)}</span>
           <div class="Modal__stars">
-            ${m(t.rating)}
+            ${_(t.rating)}
           </div>
         </div>
 
@@ -22,7 +22,7 @@ const s="your-energy-favorites";function n(){return JSON.parse(localStorage.getI
           <li><span>Target</span>${t.target}</li>
           <li><span>Body Part</span>${t.bodyPart}</li>
           <li><span>Equipment</span>${t.equipment}</li>
-          <li><span>Calories</span>${t.caloriesBurned}</li>
+          <li><span>Calories</span>${t.burnedCalories||t.caloriesBurned||0} / ${t.time} min</li>
         </ul>
 
         <p class="Modal__description">
@@ -37,4 +37,4 @@ const s="your-energy-favorites";function n(){return JSON.parse(localStorage.getI
       </div>
     </div>
   `;const o=document.getElementById("favorite-btn");o.addEventListener("click",()=>{r(e)?(v(e),o.textContent="Add to favorites"):(c(t),o.textContent="Remove from favorites")}),u()}export{n as g,p as o};
-//# sourceMappingURL=modal-8-IlCnh-.js.map
+//# sourceMappingURL=modal-CiyxqEL6.js.map

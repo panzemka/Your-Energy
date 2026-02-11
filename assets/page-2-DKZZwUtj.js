@@ -1,4 +1,4 @@
-import"./styles-DxHr4Hhd.js";import{o as l,g as c}from"./modal-8-IlCnh-.js";const _=document.querySelectorAll(".header__link"),n=window.location.pathname.split("/").pop();_.forEach(a=>{const t=a.getAttribute("href");(n===""&&t.includes("index")||n===t.replace("./",""))&&a.classList.add("header__link--active")});const s=document.getElementById("favorites-list");function p(a=0){return Array.from({length:5},(t,e)=>`
+import"./styles-DxHr4Hhd.js";import{o as l,g as c}from"./modal-CiyxqEL6.js";const _=document.querySelectorAll(".header__link"),n=window.location.pathname.split("/").pop();_.forEach(a=>{const t=a.getAttribute("href");(n===""&&t.includes("index")||n===t.replace("./",""))&&a.classList.add("header__link--active")});const s=document.getElementById("favorites-list");function p(a=0){return Array.from({length:5},(t,e)=>`
     <span class="Card__star ${e<Math.round(a)?"Card__star--active":""}">★</span>
   `).join("")}function u(){const a=c();if(!a.length){s.innerHTML=`
       <p class="Favorites__empty">
@@ -31,4 +31,4 @@ import"./styles-DxHr4Hhd.js";import{o as l,g as c}from"./modal-8-IlCnh-.js";cons
         </button>
       </li>
     `).join("")}s.addEventListener("click",a=>{const t=a.target.closest(".Card__btn");t&&l(t.dataset.id)});document.addEventListener("DOMContentLoaded",u);
-//# sourceMappingURL=page-2-DMC0sZmj.js.map
+//# sourceMappingURL=page-2-DKZZwUtj.js.map
