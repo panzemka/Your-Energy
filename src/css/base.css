@@ -30,10 +30,16 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
-
 .Home__layout {
   display: grid;
-  gap: 24px;
+  gap: 64px;
+}
+
+@media (min-width: 1024px) {
+  .Home__layout {
+    grid-template-columns: 320px 1fr;
+    align-items: start;
+  }
 }
 
 @media (min-width: 768px) {
