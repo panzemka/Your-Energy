@@ -1,0 +1,36 @@
+.Exercises {
+  margin-bottom: 80px;
+}
+
+.Exercises__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Exercises__breadcrumb {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+
+.Exercises__controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#exercises-search input {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #eaeaea;
+  min-width: 240px;
+  outline: none;
+}
+
+#exercises-search input:focus {
+  border-color: #111;
+}

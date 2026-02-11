@@ -1,21 +1,45 @@
-<form class="Exercises__search" id="exercises-search">
-  <input
-    class="Exercises__input"
-    type="text"
-    name="keyword"
-    placeholder="Search exercises"
-    autocomplete="off"
-  />
-</form>
+<section class="Exercises" id="exercises-section">
+  <div class="Exercises__content">
 
-<section class="Exercises is-hidden" id="exercises-section">
-  <div class="container">
-    <h2 class="Exercises__title" id="exercises-title"></h2>
+    <div class="Exercises__top">
 
-    <ul class="Exercises__list" id="exercises-list">
-    </ul>
+      <h2 class="Exercises__breadcrumb">
+        Exercises /
+        <span id="exercises-title"></span>
+      </h2>
 
-    <div class="Exercises__pagination" id="exercises-pagination">
+      <div class="Exercises__controls">
+
+        <form id="exercises-search">
+          <input
+            type="text"
+            name="keyword"
+            placeholder="Search"
+          />
+        </form>
+
+        <div class="Exercises__filters">
+          <button data-filter="Muscles" class="Filters__btn Filters__btn--active">
+            Muscles
+          </button>
+          <button data-filter="Body parts" class="Filters__btn">
+            Body parts
+          </button>
+          <button data-filter="Equipment" class="Filters__btn">
+            Equipment
+          </button>
+        </div>
+
+      </div>
+
     </div>
+
+    <ul class="Exercises__list" id="exercises-list"></ul>
+
+    <div
+      class="Exercises__pagination"
+      id="exercises-pagination">
+    </div>
+
   </div>
 </section>

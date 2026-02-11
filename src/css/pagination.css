@@ -1,0 +1,27 @@
+.Exercises__pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Pagination__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.Pagination__btn:hover {
+  border-color: #111;
+}
+
+.Pagination__btn--active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}

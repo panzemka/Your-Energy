@@ -1,29 +1,31 @@
-import { fetchExercises } from './exercises-api';
+import { fetchExercises } from './exercises-api.js';
+import { showExercises } from './exercises.js';
 
 const listEl = document.getElementById('categories-list');
 
-export function renderCategories(categories = []) {
-  if (!categories.length) {
+export function renderCategories(categories) {
+  if (!categories || !categories.length) {
     listEl.innerHTML = '<p>No categories found</p>';
     return;
   }
 
   listEl.innerHTML = categories
-    .map(
-      ({ name, filter }) => `
-      <li class="Categories__item">
-        <button class="Categories__card" type="button">
-          <div class="Categories__thumb">
-            <div class="Categories__placeholder">IMG</div>
-          </div>
-          <div class="Categories__info">
-            <h3 class="Categories__name">${name}</h3>
-            <p class="Categories__type">${filter}</p>
-          </div>
-        </button>
+    .map(({ name, imgURL, filter }) => `
+      <li>
+        <div
+          class="Categories__card"
+          data-name="${name}"
+          data-filter="${filter}">
+
+          <img
+            src="${imgURL}"
+            alt="${name}" />
+
+          <span class="Categories__name">${name}</span>
+
+        </div>
       </li>
-    `
-    )
+    `)
     .join('');
 }
 
@@ -31,8 +33,9 @@ listEl.addEventListener('click', event => {
   const card = event.target.closest('.Categories__card');
   if (!card) return;
 
-  const category = card.querySelector('.Categories__name').textContent;
-  const filter = card.querySelector('.Categories__type').textContent;
+  const category = card.dataset.name;
+  const filter = card.dataset.filter;
 
+  showExercises(category);
   fetchExercises({ category, filter });
 });

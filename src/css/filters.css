@@ -1,29 +1,16 @@
-.Filters {
-  padding: 24px 0;
-}
-
-.Filters__title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.Filters__buttons {
+.Exercises__filters {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
 .Filters__btn {
-  padding: 8px 18px;
+  padding: 8px 20px;
   border-radius: 999px;
   border: 1px solid #242424;
   background-color: transparent;
-
   font-size: 14px;
   font-weight: 500;
   color: #242424;
-
   cursor: pointer;
   transition: background-color 0.25s ease, color 0.25s ease;
 }

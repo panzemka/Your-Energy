@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Favorites</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorites</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
 
-  <body>
-    <load src="./partials/header.html" />
+<body>
 
-    <main class="container">
-      <h1>Favorites</h1>
-      <ul id="favorites-list"></ul>
-    </main>
+  <load src="partials/header.html" />
 
-    <load src="./partials/footer.html" />
-    <script type="module" src="./js/favorites-page.js"></script>
-  </body>
+  <main>
+
+    <section class="Favorites">
+      <div class="container Favorites__layout">
+
+        <aside class="Favorites__aside">
+          <load src="partials/quote.html" />
+        </aside>
+
+        <div class="Favorites__content">
+
+          <h1 class="Favorites__title">Favorites</h1>
+
+          <ul class="Exercises__list" id="favorites-list"></ul>
+
+        </div>
+
+      </div>
+    </section>
+
+    <load src="partials/modals.html" />
+
+  </main>
+
+  <load src="partials/footer.html" />
+
+  <script type="module" src="./js/favourites.js"></script>
+
+</body>
 </html>

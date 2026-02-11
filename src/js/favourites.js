@@ -1,14 +1,9 @@
+import { getFavorites } from './favorites-storage.js';
 import { openExerciseModal } from './modal.js';
 
-const titleEl = document.getElementById('exercises-title');
-const listEl = document.getElementById('exercises-list');
+const listEl = document.getElementById('favorites-list');
 
-export function showExercises(title) {
-  titleEl.textContent = title;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function renderStars(rating) {
+function renderStars(rating = 0) {
   return Array.from({ length: 5 }, (_, i) => `
     <span class="Card__star ${
       i < Math.round(rating) ? 'Card__star--active' : ''
@@ -16,13 +11,19 @@ function renderStars(rating) {
   `).join('');
 }
 
-export function renderExercises(exercises = []) {
-  if (!exercises.length) {
-    listEl.innerHTML = '<p>No exercises found</p>';
+function renderFavorites() {
+  const favorites = getFavorites();
+
+  if (!favorites.length) {
+    listEl.innerHTML = `
+      <p class="Favorites__empty">
+        It appears that you haven't added any exercises to your favorites yet.
+      </p>
+    `;
     return;
   }
 
-  listEl.innerHTML = exercises
+  listEl.innerHTML = favorites
     .map(
       ({
         _id,
@@ -30,8 +31,7 @@ export function renderExercises(exercises = []) {
         bodyPart,
         target,
         caloriesBurned,
-        time,
-        rating,
+        rating = 0,
       }) => `
       <li class="Card">
         <div class="Card__top">
@@ -47,7 +47,7 @@ export function renderExercises(exercises = []) {
         <h3 class="Card__title">${name}</h3>
 
         <ul class="Card__meta">
-          <li><span>Burned calories:</span>${caloriesBurned} / ${time} min</li>
+          <li><span>Burned calories:</span>${caloriesBurned} cal</li>
           <li><span>Body part:</span>${bodyPart}</li>
           <li><span>Target:</span>${target}</li>
         </ul>
@@ -68,3 +68,5 @@ listEl.addEventListener('click', e => {
   if (!btn) return;
   openExerciseModal(btn.dataset.id);
 });
+
+document.addEventListener('DOMContentLoaded', renderFavorites);

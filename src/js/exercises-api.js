@@ -1,5 +1,5 @@
-import { renderExercises } from './exercises';
-import { renderPagination } from './pagination';
+import { renderExercises } from './exercises.js';
+import { renderPagination } from './pagination.js';
 
 const EXERCISES_URL = 'https://your-energy.b.goit.study/api/exercises';
 
@@ -7,7 +7,7 @@ let currentCategory = '';
 let currentFilter = '';
 let currentPage = 1;
 let currentKeyword = '';
-const limit = 10;
+const limit = 12;
 
 export async function fetchExercises({
   category,
@@ -25,20 +25,31 @@ export async function fetchExercises({
     limit,
   });
 
-  if (keyword) params.append('keyword', keyword);
+  if (keyword) {
+    params.append('keyword', keyword);
+  }
 
-  if (filter === 'Muscles') params.append('muscles', category.toLowerCase());
-  if (filter === 'Body parts') params.append('bodypart', category.toLowerCase());
-  if (filter === 'Equipment') params.append('equipment', category.toLowerCase());
+  if (filter === 'Muscles') {
+    params.append('muscles', category.toLowerCase());
+  }
+
+  if (filter === 'Body parts') {
+    params.append('bodypart', category.toLowerCase());
+  }
+
+  if (filter === 'Equipment') {
+    params.append('equipment', category.toLowerCase());
+  }
 
   try {
-    const response = await fetch(`${EXERCISES_URL}?${params.toString()}`);
-    if (!response.ok) throw new Error('Failed to fetch exercises');
+    const response = await fetch(
+      `${EXERCISES_URL}?${params.toString()}`
+    );
 
     const data = await response.json();
 
     renderExercises(data.results, category);
-    renderPagination(data.totalPages, currentPage);
+    renderPagination(data.totalPages, page);
   } catch (error) {
     console.error(error);
   }

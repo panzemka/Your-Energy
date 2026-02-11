@@ -13,7 +13,9 @@
 @import url('./exercises.css');
 @import url('./modal.css');
 @import url('./footer.css');
-
+@import url('./pagination.css');
+@import url('./exercises-layout.css');
+@import url('./favorites.css');
 
 @font-face {
   font-family: 'Inter';
@@ -51,4 +53,6 @@
 body {
   font-family: 'Inter', sans-serif;
   color: #242424;
+  font-weight: 400;
+  line-height: 1.5;
 }

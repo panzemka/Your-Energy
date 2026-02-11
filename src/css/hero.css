@@ -1,25 +1,50 @@
 .Hero {
-  padding: 64px 0;
+  padding: 64px 0 96px;
 }
 
 .Hero__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
   align-items: center;
+  gap: 64px;
+}
+
+@media (min-width: 1024px) {
+  .Hero__grid {
+    grid-template-columns: 520px 1fr;
+  }
+}
+
+.Hero__left {
+  max-width: 520px;
+}
+
+.Hero__tags {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  opacity: 0.5;
+  margin-bottom: 24px;
 }
 
 .Hero__title {
-  font-size: 48px;
-  line-height: 1.1;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1px;
   margin-bottom: 24px;
 }
 
 .Hero__subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.7;
   max-width: 420px;
 }
 
 .Hero__right img {
   width: 100%;
-  border-radius: 24px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 32px;
 }

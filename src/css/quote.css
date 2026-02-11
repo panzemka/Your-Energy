@@ -1,32 +1,48 @@
+.Quote {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
 .Quote__card {
-  background: #242424;
+  background: #111;
   color: #fff;
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 32px;
+  padding: 32px;
+  border-radius: 28px;
 }
 
 .Quote__text {
   font-size: 16px;
-  margin-bottom: 12px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .Quote__author {
+  font-size: 14px;
   opacity: 0.7;
 }
 
 .Quote__info {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   align-items: flex-start;
 }
 
 .Quote__number {
-  font-size: 32px;
+  font-size: 64px;
   font-weight: 700;
+  line-height: 1;
+}
+
+.Quote__minutes {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 }
 
 .Quote__desc {
-  color: #7a7a7a;
   font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.6;
+  max-width: 180px;
 }

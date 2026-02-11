@@ -1,0 +1,24 @@
+.Favorites__layout {
+  display: grid;
+  gap: 80px;
+  margin-top: 120px;
+}
+
+@media (min-width: 1024px) {
+  .Favorites__layout {
+    grid-template-columns: 360px 1fr;
+    align-items: start;
+  }
+}
+
+.Favorites__title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 48px;
+}
+
+.Favorites__empty {
+  font-size: 16px;
+  opacity: 0.6;
+  max-width: 400px;
+}

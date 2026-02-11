@@ -1,41 +1,104 @@
-.exercise-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 16px;
-  border: 1px solid #e5e5e5;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.Exercises__list {
+  display: grid;
+  gap: 28px;
+  margin-top: 32px;
 }
 
-.exercise-card__top {
+@media (min-width: 768px) {
+  .Exercises__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .Exercises__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Card {
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.2s ease;
+}
+
+.Card:hover {
+  border-color: #111;
+}
+
+.Card__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.badge {
-  background: #242424;
-  color: #fff;
-  padding: 4px 10px;
+.Card__badge {
+  padding: 4px 12px;
   border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.Card__rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.Card__rating-value {
   font-size: 12px;
 }
 
-.rating {
-  font-size: 14px;
+.Card__stars {
+  display: flex;
+  gap: 2px;
 }
 
-.exercise-card__title {
+.Card__star {
+  font-size: 12px;
+  color: #ddd;
+}
+
+.Card__star--active {
+  color: #111;
+}
+
+.Card__title {
+  font-size: 18px;
   font-weight: 600;
 }
 
-.exercise-card__btn {
-  margin-top: auto;
-  background: #242424;
-  color: #fff;
-  border: none;
+.Card__meta {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.Card__meta span {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.Card__btn {
+  align-self: flex-start;
+  padding: 8px 18px;
   border-radius: 999px;
-  padding: 8px 16px;
+  border: 1px solid #111;
+  background: transparent;
   cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.Card__btn:hover {
+  background: #111;
+  color: #fff;
 }

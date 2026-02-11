@@ -1,5 +1,6 @@
 <header class="header">
   <div class="container header__container">
+
     <a href="./index.html" class="header__logo">
       YOUR ENERGY
     </a>
@@ -7,12 +8,18 @@
     <nav class="header__nav">
       <ul class="header__menu">
         <li>
-          <a href="./index.html" class="header__link header__link--active">
+          <a
+            href="./index.html"
+            class="header__link"
+          >
             Home
           </a>
         </li>
         <li>
-          <a href="./page-2.html" class="header__link">
+          <a
+            href="./page-2.html"
+            class="header__link"
+          >
             Favorites
           </a>
         </li>
@@ -21,29 +28,51 @@
 
     <ul class="header__socials">
       <li>
-        <a href="https://www.facebook.com/goITclub/"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Facebook">
+        <a
+          href="https://www.facebook.com/goITclub/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
           FB
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/goitclub/"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Instagram">
+        <a
+          href="https://www.instagram.com/goitclub/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
           IG
         </a>
       </li>
       <li>
-        <a href="https://www.youtube.com/c/GoIT"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="YouTube">
+        <a
+          href="https://www.youtube.com/c/GoIT"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
           YT
         </a>
       </li>
     </ul>
+
   </div>
 </header>
+
+<script type="module">
+  const links = document.querySelectorAll('.header__link');
+  const current = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    if (
+      (current === '' && href.includes('index')) ||
+      current === href.replace('./', '')
+    ) {
+      link.classList.add('header__link--active');
+    }
+  });
+</script>

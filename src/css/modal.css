@@ -11,25 +11,122 @@
 .Modal__backdrop {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
 }
 
 .Modal__content {
   position: relative;
-  max-width: 600px;
-  margin: 40px auto;
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
-  z-index: 1;
+  max-width: 900px;
+  margin: 60px auto;
+  background: #111;
+  border-radius: 20px;
+  padding: 32px;
+  color: #fff;
 }
 
 .Modal__close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 20px;
+  right: 20px;
   background: transparent;
   border: none;
-  font-size: 20px;
+  color: #fff;
+  font-size: 22px;
   cursor: pointer;
+}
+
+.Modal__wrapper {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .Modal__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.Modal__image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.Modal__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Modal__title {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.Modal__rating-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.Modal__rating-value {
+  font-size: 18px;
+}
+
+.Modal__stars {
+  display: flex;
+  gap: 6px;
+}
+
+.Modal__star {
+  font-size: 20px;
+  color: #444;
+}
+
+.Modal__star--active {
+  color: #fff;
+}
+
+.Modal__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.Modal__stats li span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.Modal__description {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.Modal__actions {
+  display: flex;
+  gap: 16px;
+}
+
+.Modal__btn {
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.Modal__btn--primary {
+  background: #fff;
+  color: #000;
+}
+
+.Modal__btn--secondary {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
 }
