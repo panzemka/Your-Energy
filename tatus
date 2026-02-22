@@ -1,0 +1,37 @@
+[33mcommit 3ee406a49e24e4e7d13417310b9f2124f1b7f244[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Serjio Armani <77092201+panzemka@users.noreply.github.com>
+Date:   Sun Feb 22 15:58:24 2026 +0100
+
+    fix
+
+ src/css/{workout-card.css => card.css}        |   0
+ src/css/{exercises.css => catalog.css}        |   0
+ src/css/{search.css => finder.css}            |   0
+ src/css/{daily-norm.css => norm.css}          |   0
+ src/css/{pagination.css => pager.css}         |   0
+ src/css/{modal.css => popup.css}              |  88 [32m++++++++[m[31m----------[m
+ src/css/{quote-card.css => quote.css}         |   0
+ src/css/{favorites.css => saved.css}          |   0
+ src/css/styles.css                            |  16 [32m++[m[31m--[m
+ src/js/{icons.js => assets.js}                |   4 [32m+[m[31m-[m
+ src/js/categories.js                          |  86 [32m+++++++++++++++++[m
+ src/js/daily-quote.js                         |  54 [32m+++++++++++[m
+ src/js/{exercise-modal.js => detail-modal.js} |  52 [32m+++++[m[31m------[m
+ src/js/exercises.js                           |  79 [31m----------------[m
+ src/js/favorites.js                           |  75 [31m---------------[m
+ src/js/filters.js                             |  89 [31m------------------[m
+ src/js/finder.js                              |  48 [32m++++++++++[m
+ src/js/{api.js => http.js}                    |  26 [32m+++[m[31m---[m
+ src/js/newsletter.js                          |  45 [32m+++++++++[m
+ src/js/pager.js                               |  95 [32m+++++++++++++++++++[m
+ src/js/pagination.js                          | 127 [31m-------------------------[m
+ src/js/quote.js                               |  53 [31m-----------[m
+ src/js/rating-modal.js                        | 114 [31m-----------------------[m
+ src/js/review-modal.js                        | 127 [32m+++++++++++++++++++++++++[m
+ src/js/saved.js                               |  72 [32m++++++++++++++[m
+ src/js/search.js                              |  44 [31m---------[m
+ src/js/subscription.js                        |  45 [31m---------[m
+ src/js/{markup.js => templates.js}            | 129 [32m++++++++++++++++++[m[31m--------[m
+ src/js/workouts.js                            |  74 [32m+++++++++++++++[m
+ src/main.js                                   |  50 [32m+++++[m[31m-----[m
+ 30 files changed, 805 insertions(+), 787 deletions(-)

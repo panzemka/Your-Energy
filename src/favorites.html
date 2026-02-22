@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./images/icons/ic-nutrition.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Energy - Favorites</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <load src="./partials/header.html" home-active="" fav-active="is-active" />
+
+    <main>
+      <section class="favorites">
+        <div class="container">
+          <h1 class="favorites-title">Favorites</h1>
+
+          <div class="favorites-body">
+            <div class="favorites-sidebar">
+
+              <div class="quote-card">
+                <div class="quote-card-header">
+
+                  <div class="quote-card-icon">
+                    <img src="./images/icons/ic-circle-light.svg" alt="" width="32" height="32" class="quote-card-icon-bg" loading="lazy" />
+                    <img src="./images/icons/ic-athlete.svg" alt="" width="20" height="20" class="quote-card-icon-img" loading="lazy" />
+                  </div>
+
+                  <div class="quote-card-text">
+                    <h3 class="quote-card-title">Quote of the day</h3>
+                    <p class="quote-card-quote">
+                      A lot of times I find that people who are blessed with the most talent don't ever develop that attitude,
+                      and the ones who aren't blessed in that way are the most competitive and have the biggest heart.
+                    </p>
+                  </div>
+
+                  <img class="quote-card-commas" src="./images/icons/ic-quote.svg" alt="" width="24" height="24" loading="lazy" />
+                </div>
+
+                <p class="quote-card-author">Tom Brady</p>
+              </div>
+
+              <div class="favorites-sidebar-bottom">
+                <div class="daily-norm-card daily-norm-card--compact">
+                  <div class="daily-norm-icon">
+                    <img src="./images/icons/ic-nutrition-fv.svg" alt="" width="16" height="16" loading="lazy" />
+                  </div>
+                  <h3 class="daily-norm-title">110 min</h3>
+                  <p class="daily-norm-subtitle">Daily norm of sports</p>
+                </div>
+
+                <div class="sidebar-image sidebar-image--favorites">
+                  <picture>
+                    <source type="image/png" srcset="./images/photos/rest-moment-2.png"/>
+                    <img src="./images/photos/rest-moment-2.png" alt="Women taking a break from workout" loading="lazy" />
+                  </picture>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="favorites-content">
+              <ul class="favorites-list"></ul>
+              <div class="pagination"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <load src="./partials/footer.html" />
+    <load src="./partials/modals.html" />
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
